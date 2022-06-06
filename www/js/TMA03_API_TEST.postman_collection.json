@@ -1,0 +1,513 @@
+{
+	"info": {
+		"_postman_id": "8f428ecb-4f80-4966-b313-225c3289c5ef",
+		"name": "TM352 EMA 21J",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Testing the nominatim service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://nominatim.openstreetmap.org/search/Open University, Milton Keynes?format=json&countrycodes=gb",
+					"protocol": "http",
+					"host": [
+						"nominatim",
+						"openstreetmap",
+						"org"
+					],
+					"path": [
+						"search",
+						"Open University, Milton Keynes"
+					],
+					"query": [
+						{
+							"key": "format",
+							"value": "json"
+						},
+						{
+							"key": "countrycodes",
+							"value": "gb"
+						}
+					]
+				},
+				"description": "Mashing up with OpenStreetMaps REST API\r\n\r\nSince the orders API only defines the location of the orders/requests by a street name, to display the geolocation on the map you need to translate these street names to geolocations, which are represented by latitude and longitude pairs. \r\n\r\nSince HERE Maps does not provide a REST API for this purpose, we will use another REST service, that from OpenStreetMap.\r\nThe URL end-point of the OpenStreetMaps is typically:\r\n\r\nhttp://nominatim.openstreetmap.org/search/<ADDRESS>?format=json&countrycodes=gb\r\n\r\nwhere you can fill in the URL by the ‘address’ for which you want to look up the geolocation.\r\n\r\nNote that if your application repeatedly calls this URL in a short space of time, then your access to the API will be automatically blocked for a period. So if your code suddenly stops working this is the most likely cause. Double-check the number of calls your code is making and find an appropriate way to restrict them. Whilst debugging other parts of your code it can be beneficial to temporarily replace the call to OpenStreetMap with a hard-coded value. \r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "clients - GET all records",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://137.108.92.9/openstack/api/clients/",
+					"protocol": "http",
+					"host": [
+						"137",
+						"108",
+						"92",
+						"9"
+					],
+					"path": [
+						"openstack",
+						"api",
+						"clients"
+					],
+					"query": [
+						{
+							"key": "OUCU",
+							"value": "MYOUCU"
+						},
+						{
+							"key": "password",
+							"value": "MYPASSWORD"
+						}
+					]
+				},
+				"description": "clients - GET all records"
+			},
+			"response": []
+		},
+		{
+			"name": "clients - GET record matching id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://137.108.92.9/openstack/api/clients/1234",
+					"protocol": "http",
+					"host": [
+						"137",
+						"108",
+						"92",
+						"9"
+					],
+					"path": [
+						"openstack",
+						"api",
+						"clients",
+            "1234"
+					],
+					"query": [
+						{
+							"key": "OUCU",
+							"value": "MYOUCU"
+						},
+						{
+							"key": "password",
+							"value": "MYPASSWORD"
+						}
+					]
+				},
+				"description": "clients - GET record matching id"
+			},
+			"response": []
+		},
+		{
+			"name": "widgets - GET all records",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://137.108.92.9/openstack/api/widgets/",
+					"protocol": "http",
+					"host": [
+						"137",
+						"108",
+						"92",
+						"9"
+					],
+					"path": [
+						"openstack",
+						"api",
+						"widgets"
+					],
+					"query": [
+						{
+							"key": "OUCU",
+							"value": "MYOUCU"
+						},
+						{
+							"key": "password",
+							"value": "MYPASSWORD"
+						}
+					]
+				},
+				"description": "widgets - GET all records"
+			},
+			"response": []
+		},
+		{
+			"name": "widgets - GET record matching id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://137.108.92.9/openstack/api/widgets/1234",
+					"protocol": "http",
+					"host": [
+						"137",
+						"108",
+						"92",
+						"9"
+					],
+					"path": [
+						"openstack",
+						"api",
+						"widgets",
+            "1234"
+					],
+					"query": [
+						{
+							"key": "OUCU",
+							"value": "MYOUCU"
+						},
+						{
+							"key": "password",
+							"value": "MYPASSWORD"
+						}
+					]
+				},
+				"description": "widgets - GET record matching id"
+			},
+			"response": []
+		},
+    {
+			"name": "orders - GET all records",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://137.108.92.9/openstack/api/orders/",
+					"protocol": "http",
+					"host": [
+						"137",
+						"108",
+						"92",
+						"9"
+					],
+					"path": [
+						"openstack",
+						"api",
+						"orders"
+					],
+					"query": [
+						{
+							"key": "OUCU",
+							"value": "MYOUCU"
+						},
+						{
+							"key": "password",
+							"value": "MYPASSWORD"
+						}
+					]
+				},
+				"description": "orders - GET all records"
+			},
+			"response": []
+		},
+		{
+			"name": "orders - GET record matching id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://137.108.92.9/openstack/api/orders/1234",
+					"protocol": "http",
+					"host": [
+						"137",
+						"108",
+						"92",
+						"9"
+					],
+					"path": [
+						"openstack",
+						"api",
+						"orders",
+            "1234"
+					],
+					"query": [
+						{
+							"key": "OUCU",
+							"value": "MYOUCU"
+						},
+						{
+							"key": "password",
+							"value": "MYPASSWORD"
+						}
+					]
+				},
+				"description": "orders - GET record matching id"
+			},
+			"response": []
+		},
+		{
+			"name": "orders - POST a new record",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "OUCU",
+							"value": "MYOUCU",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "MYPASSWORD",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "52.058",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "-0.713",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://137.108.92.9/openstack/api/orders/",
+					"protocol": "http",
+					"host": [
+						"137",
+						"108",
+						"92",
+						"9"
+					],
+					"path": [
+						"openstack",
+						"api",
+						"orders"
+					]
+				},
+				"description": "orders - POST a new record"
+			},
+			"response": []
+		},
+		{
+			"name": "orders - DELETE a specific record by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://137.108.92.9/openstack/api/orders/1234",
+					"protocol": "http",
+					"host": [
+						"137",
+						"108",
+						"92",
+						"9"
+					],
+					"path": [
+						"openstack",
+						"api",
+						"orders",
+            "1234"
+					],
+					"query": [
+						{
+							"key": "OUCU",
+							"value": "MYOUCU",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "MYPASSWORD",
+							"type": "text"
+						}
+					]
+				},
+				"description": "orders - DELETE a specific record by id"
+			},
+			"response": []
+		},
+    {
+			"name": "order_items - GET all records",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://137.108.92.9/openstack/api/order_items/",
+					"protocol": "http",
+					"host": [
+						"137",
+						"108",
+						"92",
+						"9"
+					],
+					"path": [
+						"openstack",
+						"api",
+						"order_items"
+					],
+					"query": [
+						{
+							"key": "OUCU",
+							"value": "MYOUCU"
+						},
+						{
+							"key": "password",
+							"value": "MYPASSWORD"
+						}
+					]
+				},
+				"description": "order_items - GET all records"
+			},
+			"response": []
+		},
+		{
+			"name": "order_items - GET record matching id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://137.108.92.9/openstack/api/order_items/1234",
+					"protocol": "http",
+					"host": [
+						"137",
+						"108",
+						"92",
+						"9"
+					],
+					"path": [
+						"openstack",
+						"api",
+						"order_items",
+            "1234"
+					],
+					"query": [
+						{
+							"key": "OUCU",
+							"value": "MYOUCU"
+						},
+						{
+							"key": "password",
+							"value": "MYPASSWORD"
+						}
+					]
+				},
+				"description": "order_items - GET record matching id"
+			},
+			"response": []
+		},
+		{
+			"name": "order_items - POST a new record",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "OUCU",
+							"value": "MYOUCU",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "MYPASSWORD",
+							"type": "text"
+						},
+						{
+							"key": "order_id",
+							"value": "541207528",
+							"type": "text"
+						},
+						{
+							"key": "widget_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "number",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "pence_price",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://137.108.92.9/openstack/api/order_items/",
+					"protocol": "http",
+					"host": [
+						"137",
+						"108",
+						"92",
+						"9"
+					],
+					"path": [
+						"openstack",
+						"api",
+						"order_items"
+					]
+				},
+				"description": "order_items - POST a new record"
+			},
+			"response": []
+		},
+		{
+			"name": "order_items - DELETE a specific record by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://137.108.92.9/openstack/api/order_items/1234",
+					"protocol": "http",
+					"host": [
+						"137",
+						"108",
+						"92",
+						"9"
+					],
+					"path": [
+						"openstack",
+						"api",
+						"order_items",
+            "1234"
+					],
+					"query": [
+						{
+							"key": "OUCU",
+							"value": "MYOUCU",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "MYPASSWORD",
+							"type": "text"
+						}
+					]
+				},
+				"description": "order_items - DELETE a specific record by id"
+			},
+			"response": []
+		}
+
+  ]
+}

@@ -40,16 +40,19 @@
 				<div>
 					<!-- TODO IV. Order navigation buttons and display -->
 					<input type="button" value="Add To Order" onclick="addOrder()">
-					<input type="button" value="End Order" onclick="endorder()">
-					<button onclick="endorder()">End Order</button>	
+					<button onclick="endOrder()">End Order</button>	
 					<p id="order">Dear, ....</p>
 					<ul id="ordered"></ul>
+					<p id="subtot"></p>
+					<p id="vat"></p>
+					<p id="tot"></p>
 				</div>
 				<!-- TODO V. Map canvas -->
 				<div id="mapContainer"></div>
         	</div>
 		<script type="text/javascript" src="cordova.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/helpers.js"></script>
 
  	</body>
 </html>
